@@ -3,40 +3,40 @@
 	<title> NOT HESAPLAYICI </title>
 
 	<style type="text/css">
-		.kutu	{
+  	.kutu	{
 	width: 400px;
 	height: 450px;
 	background-color:#5C26FF ;
-    box-shadow: 24px 13px 11px 3px #000;
-    margin-left: 650px;
-    margin-top: 150px;
-}
+    	box-shadow: 24px 13px 11px 3px #000;
+    	margin-left: 650px;
+    	margin-top: 150px;
+		}
+	
+	.ortala {
+		margin-left:  60px;
+	}
 
-.ortala {
- 	margin-left:  60px;
-}
+	.hesap_kutusu {
+		border-radius: 5px;
+		border-color: black;
+		margin-top: 30px;
+	}
 
-.hesap_kutusu {
-	border-radius: 5px;
-	border-color: black;
-	margin-top: 30px;
-}
+	#hesap {
+		border-radius: 15px;
+		background-color: yellow;
+		border: none;
+		width: 150px;
+		height: 50px;
+		margin-left: 65px;
+		margin-top: 10px;
 
-#hesap {
-	border-radius: 15px;
-	background-color: yellow;
-	border: none;
-	width: 150px;
-	height: 50px;
-	margin-left: 65px;
-	margin-top: 10px;
+	}
 
-}
-
-#hesap a {
-	text-decoration: none;
-	color: black;
-}
+	#hesap a {
+		text-decoration: none;
+		color: black;
+	}
 
 
 
@@ -71,12 +71,12 @@ Sözlü 2:<input type="text" name="sözlü2" class="hesap_kutusu" maxlength="3" 
          </tr>
          <tr>
          	<td>
-         		<button id="hesap" value="HESAPLA" onClick="hesapla()"><a href="#"> HESAPLA </a></button>
+<button id="hesap" value="HESAPLA" onClick="hesapla()"><a href="#"> HESAPLA </a></button>
          	</td>
         </tr>
         <tr>
         	<td>
-        		    <div id="ort"></div>
+			<div id="ort"></div>
                 	<div id="sonuc"></div>
         	</td>
         </tr>

@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title> NOT HESAPLAYICI </title>
+</head>
+<body>
+<form name="ortalama">
+	<table>
+		 <tr>
+		 	<td>
+Sınav 1:<input type="text" name="sinav1" class="hesap_kutusu" ><br><br>
+		 	</td>
+		 </tr>
+         <tr>
+         	<td>
+Sınav 2:<input type="text" name="sinav2" class="hesap_kutusu" ><br><br>
+         	</td>	
+         </tr>
+          <tr>
+         	<td>
+Sözlü 1:<input type="text" name="sözlü1" class="hesap_kutusu" ><br><br>
+         	</td>	
+         </tr>
+	      <tr>
+         	<td>
+Sözlü 2:<input type="text" name="sözlü2" class="hesap_kutusu" ><br><br>
+         	</td>	
+         </tr>
+         <tr>
+         	<td>
+		<input type="button" value="HESAPLA" id="hesap" onClick="hesapla()">
+         	</td>
+        </tr>
+	</table>
+    </form>
+<div id="ort"></div>
+	<div id="sonuc"></div>
+
+
+<script type="text/javascript">
+ function hesapla() {
+							var s1 = document.ortalama.sinav1.value;
+							var s2 = document.ortalama.sinav2.value;
+							var p1 = document.ortalama.sözlü1.value;
+							var p2 = document.ortalama.sözlü2.value;
+							var ortalama = (Number(s1)+Number(s2)+Number(p1)+Number(p2))/4;
+
+							var durum = "" ;
+
+ 							if (ortalama<50) {
+ 								durum = "Dersten kaldı";
+ 							}
+
+ 							else {
+ 								durum = "Dersten geçti";
+ 							}
+
+            document.getElementById("ort").innerHTML=ortalama;
+			document.getElementById("sonuc").innerHTML=durum;
+</script>
+</body>	
+</html>

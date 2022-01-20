@@ -1,43 +1,96 @@
 <html>
 <head>
 	<title> NOT HESAPLAYICI </title>
+
+	<style type="text/css">
+		.kutu	{
+	width: 400px;
+	height: 450px;
+	background-color:#5C26FF ;
+    box-shadow: 24px 13px 11px 3px #000;
+    margin-left: 650px;
+    margin-top: 150px;
+}
+
+.ortala {
+ 	margin-left:  60px;
+}
+
+.hesap_kutusu {
+	border-radius: 5px;
+	border-color: black;
+	margin-top: 30px;
+}
+
+#hesap {
+	border-radius: 15px;
+	background-color: yellow;
+	border: none;
+	width: 150px;
+	height: 50px;
+	margin-left: 65px;
+	margin-top: 10px;
+
+}
+
+#hesap a {
+	text-decoration: none;
+	color: black;
+}
+
+
+
+	</style>
+
 </head>
 <body>
-<form name="ortalama">
-	<table>
+
+
+<form name="ortalama" class="kutu">
+	<h2 style="text-align: center;">  NOT HESAPLAYICI </h2>
+	<table class="ortala">
 		 <tr>
 		 	<td>
-Sınav 1:<input type="text" name="sinav1" class="hesap_kutusu" ><br><br>
+Sınav 1:<input type="text" name="sinav1" class="hesap_kutusu" maxlength="3"   >
 		 	</td>
 		 </tr>
          <tr>
          	<td>
-Sınav 2:<input type="text" name="sinav2" class="hesap_kutusu" ><br><br>
+Sınav 2:<input type="text" name="sinav2" class="hesap_kutusu" maxlength="3" >
          	</td>	
          </tr>
           <tr>
          	<td>
-Sözlü 1:<input type="text" name="sözlü1" class="hesap_kutusu" ><br><br>
+Sözlü 1:<input type="text" name="sözlü1" class="hesap_kutusu" maxlength="3" >
          	</td>	
          </tr>
 	      <tr>
          	<td>
-Sözlü 2:<input type="text" name="sözlü2" class="hesap_kutusu" ><br><br>
+Sözlü 2:<input type="text" name="sözlü2" class="hesap_kutusu" maxlength="3" >
          	</td>	
          </tr>
          <tr>
          	<td>
-		<input type="button" value="HESAPLA" id="hesap" onClick="hesapla()">
+         		<button id="hesap" value="HESAPLA" onClick="hesapla()"><a href="#"> HESAPLA </a></button>
          	</td>
+        </tr>
+        <tr>
+        	<td>
+        		    <div id="ort"></div>
+                	<div id="sonuc"></div>
+        	</td>
         </tr>
 	</table>
     </form>
-<div id="ort"></div>
-	<div id="sonuc"></div>
-
 
 <script type="text/javascript">
+	
+
+
  function hesapla() {
+
+
+
 							var s1 = document.ortalama.sinav1.value;
 							var s2 = document.ortalama.sinav2.value;
 							var p1 = document.ortalama.sözlü1.value;
@@ -56,6 +109,14 @@ Sözlü 2:<input type="text" name="sözlü2" class="hesap_kutusu" ><br><br>
 
             document.getElementById("ort").innerHTML=ortalama;
 			document.getElementById("sonuc").innerHTML=durum;
+
+
+ }
+
+  
+
+
+
 </script>
 </body>	
 </html>
